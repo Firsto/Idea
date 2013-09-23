@@ -127,7 +127,7 @@ class Hierarchy {
 class Action {
       static int id;
       String name;
-      Gadget method;
+      Gadget method;                                //связанный инструмент
       int time;
 
     String getName() {
@@ -163,7 +163,7 @@ class Action {
 class Gadget {
     static int id;
     String name;
-    Action action;
+    Action action;                             //связанные действия
 
     String getName() {
         return name;
@@ -186,15 +186,36 @@ class Calend {
 
     Calend(){
         number++;
-        for (int i = 0; i < 3; i++) {
+        int h = 0;   //часы
+        int d = 0;
+
+        for (int i = 1; i < 31; i++) {
+
+            System.out.print(i + " >");
+
+            for (int j = 0; j < 24; j++) {
+                System.out.print(" " + j + " |");
+            }
+            System.out.println();
+
+        }
+
+
+
+      /*
+        System.out.println("Calend1:");
+        for (int i = 0; i < 2; i++) {
             Action a = new Action();
 
             for (int j = 0; j < a.time; j++) {
-               a.getAction();
-            }
 
-            System.out.println("---");
-        }
+                System.out.print("[" + h++ + "|--->");
+            }
+            //System.out.println();
+            //a.getAction();
+
+            //System.out.println("---");
+        }      */
     }
 
     void setScale(String scale) {
